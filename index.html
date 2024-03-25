@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    #welcomeMessage {
-      font-size: 48px; /* Increased font size */
-      color: #333;
-      margin-top: 50px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Font and Style</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .text {
+    font-size: 24px;
+    transition: font-size 0.3s ease;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+  }
+  
+  .text:hover {
+    font-size: 28px;
+    border-bottom: 2px solid #333;
+  }
+</style>
 </head>
 <body>
-  <div id="welcomeMessage">Handsome Rudrakshya</div>
 
-  <script>
-    window.onload = function() {
-      var welcomeMessage = document.getElementById('welcomeMessage');
-      var fonts = ['Arial', 'Helvetica', 'Georgia', 'Verdana', 'Tahoma', 'Trebuchet MS', 'Times New Roman', 'Courier New'];
+<div class="container">
+  <span class="text" id="dynamicText">handsome rudrakshya</span>
+</div>
 
-      // Randomly choose a font from the array
-      var randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+<script>
+  // JavaScript to handle dynamic font change
+  
+  // Target the text element
+  const textElement = document.getElementById('dynamicText');
+  
+  // Array of font families
+  const fonts = ['Arial', 'Helvetica', 'Georgia', 'Times New Roman', 'Courier New', 'Verdana'];
+  
+  // Function to get a random font from the array
+  function getRandomFont() {
+    const randomIndex = Math.floor(Math.random() * fonts.length);
+    return fonts[randomIndex];
+  }
+  
+  // Function to change font on hover
+  textElement.addEventListener('mouseover', function() {
+    const randomFont = getRandomFont();
+    textElement.style.fontFamily = randomFont;
+  });
+</script>
 
-      // Apply the random font to the welcome message
-      welcomeMessage.style.fontFamily = randomFont;
-    };
-  </script>
 </body>
 </html>
