@@ -1,2 +1,36 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #welcomeMessage {
+      font-size: 48px; /* Increased font size */
+      color: #333;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcomeMessage">Handsome Rudrakshya</div>
+
+  <script>
+    window.onload = function() {
+      var welcomeMessage = document.getElementById('welcomeMessage');
+      var fonts = ['Arial', 'Helvetica', 'Georgia', 'Verdana', 'Tahoma', 'Trebuchet MS', 'Times New Roman', 'Courier New'];
+
+      // Randomly choose a font from the array
+      var randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+
+      // Apply the random font to the welcome message
+      welcomeMessage.style.fontFamily = randomFont;
+    };
+  </script>
+</body>
+</html>
