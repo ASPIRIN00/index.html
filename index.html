@@ -1,65 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dynamic Font and Style</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  .text {
-    font-size: 24px;
-    transition: font-size 0.3s ease;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    display: inline-block;
-  }
-  
-  .text:hover {
-    font-size: 28px;
-    border-bottom: 2px solid #333;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Generated Picture Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="container">
-  <span class="text" id="dynamicText">handsome rudrakshya</span>
-</div>
-
-<script>
-  // JavaScript to handle dynamic font change
-  
-  // Target the text element
-  const textElement = document.getElementById('dynamicText');
-  
-  // Array of font families
-  const fonts = ['Arial', 'Helvetica', 'Georgia', 'Times New Roman', 'Courier New', 'Verdana'];
-  
-  // Function to get a random font from the array
-  function getRandomFont() {
-    const randomIndex = Math.floor(Math.random() * fonts.length);
-    return fonts[randomIndex];
-  }
-  
-  // Function to change font on hover
-  textElement.addEventListener('mouseover', function() {
-    const randomFont = getRandomFont();
-    textElement.style.fontFamily = randomFont;
-  });
-</script>
-
+    <header>
+        <h1>Welcome to our AI Generated Picture Website</h1>
+    </header>
+    <main>
+        <section class="picture">
+            <img src="your_ai_generated_picture.jpg" alt="AI Generated Picture">
+        </section>
+        <section class="content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero non mi ultricies tincidunt. Donec bibendum, ex sit amet dictum lacinia, tortor metus viverra lorem, ut dictum lorem odio et dui.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 AI Generated Picture Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
