@@ -1,44 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.picture {
-    flex: 1 1 300px;
-    margin: 20px;
-}
-
-.picture img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.content {
-    flex: 1 1 400px;
-    margin: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudrakshya's Jungle</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .jungle-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    .name {
+      text-align: center;
+      font-size: 36px;
+      margin-top: 20px;
+      color: #333;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      .name {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Rudrakshya's Jungle</h1>
+  </div>
+  <div class="container">
+    <img src="your-ai-generated-jungle-image.jpg" alt="Jungle" class="jungle-image">
+    <div class="name">rudrakshya</div>
+  </div>
+</body>
+</html>
